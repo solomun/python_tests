@@ -1,3 +1,8 @@
-#urls.py for polls
-from django import http
+from django.conf.urls import patterns, url
+
+from polls import views
+
+urlpatterns = patterns('',
+                       url(r'^$', views.index, name='index')
+                       )
 
